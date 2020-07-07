@@ -13,6 +13,8 @@
 		8467CE5B24B3B03E003086EA /* The_Good_CornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */; };
 		849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B524B45C0C008F3591 /* MainCoordinator.swift */; };
 		849487BA24B46429008F3591 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B924B46429008F3591 /* RequestManager.swift */; };
+		849487BF24B46E05008F3591 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BE24B46E05008F3591 /* Category.swift */; };
+		849487C124B46E28008F3591 /* AdDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487C024B46E28008F3591 /* AdDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		8467CE5C24B3B03E003086EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849487B524B45C0C008F3591 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		849487B924B46429008F3591 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		849487BE24B46E05008F3591 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		849487C024B46E28008F3591 /* AdDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +106,40 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		849487B724B45CE3008F3591 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				849487B924B46429008F3591 /* RequestManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		849487B824B45E27008F3591 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				849487BD24B46DE2008F3591 /* Models */,
+				849487B724B45CE3008F3591 /* Managers */,
 				849487B424B45B8E008F3591 /* Coordinators */,
 				8467CE4324B3B03D003086EA /* AppDelegate.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		849487BD24B46DE2008F3591 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				849487C224B476B7008F3591 /* DTO */,
+				849487BE24B46E05008F3591 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		849487C224B476B7008F3591 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				849487C024B46E28008F3591 /* AdDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849487BF24B46E05008F3591 /* Category.swift in Sources */,
+				849487C124B46E28008F3591 /* AdDTO.swift in Sources */,
+				849487BA24B46429008F3591 /* RequestManager.swift in Sources */,
 				8467CE4424B3B03D003086EA /* AppDelegate.swift in Sources */,
 				849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */,
 			);
