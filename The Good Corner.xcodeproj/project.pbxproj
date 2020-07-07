@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8467CE4424B3B03D003086EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467CE4324B3B03D003086EA /* AppDelegate.swift */; };
+		8467CE4D24B3B03D003086EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467CE4C24B3B03D003086EA /* Assets.xcassets */; };
+		8467CE5024B3B03D003086EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467CE4E24B3B03D003086EA /* LaunchScreen.storyboard */; };
+		8467CE5B24B3B03E003086EA /* The_Good_CornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8467CE5724B3B03E003086EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8467CE3824B3B03C003086EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8467CE3F24B3B03C003086EA;
+			remoteInfo = "The Good Corner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8467CE4024B3B03D003086EA /* The Good Corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Good Corner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467CE4324B3B03D003086EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8467CE4C24B3B03D003086EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8467CE4F24B3B03D003086EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8467CE5124B3B03D003086EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467CE5624B3B03E003086EA /* The Good CornerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Good CornerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Good_CornerTests.swift; sourceTree = "<group>"; };
+		8467CE5C24B3B03E003086EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8467CE3D24B3B03C003086EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467CE5324B3B03E003086EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8467CE3724B3B03C003086EA = {
+			isa = PBXGroup;
+			children = (
+				8467CE4224B3B03D003086EA /* The Good Corner */,
+				8467CE5924B3B03E003086EA /* The Good CornerTests */,
+				8467CE4124B3B03D003086EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8467CE4124B3B03D003086EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8467CE4024B3B03D003086EA /* The Good Corner.app */,
+				8467CE5624B3B03E003086EA /* The Good CornerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8467CE4224B3B03D003086EA /* The Good Corner */ = {
+			isa = PBXGroup;
+			children = (
+				849487B824B45E27008F3591 /* Classes */,
+				8467CE4C24B3B03D003086EA /* Assets.xcassets */,
+				8467CE4E24B3B03D003086EA /* LaunchScreen.storyboard */,
+				8467CE5124B3B03D003086EA /* Info.plist */,
+			);
+			path = "The Good Corner";
+			sourceTree = "<group>";
+		};
+		8467CE5924B3B03E003086EA /* The Good CornerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */,
+				8467CE5C24B3B03E003086EA /* Info.plist */,
+			);
+			path = "The Good CornerTests";
+			sourceTree = "<group>";
+		};
+		849487B824B45E27008F3591 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8467CE4324B3B03D003086EA /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8467CE3F24B3B03C003086EA /* The Good Corner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8467CE5F24B3B03E003086EA /* Build configuration list for PBXNativeTarget "The Good Corner" */;
+			buildPhases = (
+				8467CE3C24B3B03C003086EA /* Sources */,
+				8467CE3D24B3B03C003086EA /* Frameworks */,
+				8467CE3E24B3B03C003086EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Good Corner";
+			productName = "The Good Corner";
+			productReference = 8467CE4024B3B03D003086EA /* The Good Corner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8467CE5524B3B03E003086EA /* The Good CornerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8467CE6224B3B03E003086EA /* Build configuration list for PBXNativeTarget "The Good CornerTests" */;
+			buildPhases = (
+				8467CE5224B3B03E003086EA /* Sources */,
+				8467CE5324B3B03E003086EA /* Frameworks */,
+				8467CE5424B3B03E003086EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8467CE5824B3B03E003086EA /* PBXTargetDependency */,
+			);
+			name = "The Good CornerTests";
+			productName = "The Good CornerTests";
+			productReference = 8467CE5624B3B03E003086EA /* The Good CornerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8467CE3824B3B03C003086EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Olivier Duménil";
+				TargetAttributes = {
+					8467CE3F24B3B03C003086EA = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8467CE5524B3B03E003086EA = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8467CE3F24B3B03C003086EA;
+					};
+				};
+			};
+			buildConfigurationList = 8467CE3B24B3B03C003086EA /* Build configuration list for PBXProject "The Good Corner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8467CE3724B3B03C003086EA;
+			productRefGroup = 8467CE4124B3B03D003086EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8467CE3F24B3B03C003086EA /* The Good Corner */,
+				8467CE5524B3B03E003086EA /* The Good CornerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8467CE3E24B3B03C003086EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467CE5024B3B03D003086EA /* LaunchScreen.storyboard in Resources */,
+				8467CE4D24B3B03D003086EA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467CE5424B3B03E003086EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8467CE3C24B3B03C003086EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467CE4424B3B03D003086EA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467CE5224B3B03E003086EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467CE5B24B3B03E003086EA /* The_Good_CornerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8467CE5824B3B03E003086EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8467CE3F24B3B03C003086EA /* The Good Corner */;
+			targetProxy = 8467CE5724B3B03E003086EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8467CE4E24B3B03D003086EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8467CE4F24B3B03D003086EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8467CE5D24B3B03E003086EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8467CE5E24B3B03E003086EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8467CE6024B3B03E003086EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3WA6Y3A28;
+				INFOPLIST_FILE = "The Good Corner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dumenil.The-Good-Corner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8467CE6124B3B03E003086EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3WA6Y3A28;
+				INFOPLIST_FILE = "The Good Corner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dumenil.The-Good-Corner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8467CE6324B3B03E003086EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3WA6Y3A28;
+				INFOPLIST_FILE = "The Good CornerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dumenil.The-Good-CornerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Good Corner.app/The Good Corner";
+			};
+			name = Debug;
+		};
+		8467CE6424B3B03E003086EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3WA6Y3A28;
+				INFOPLIST_FILE = "The Good CornerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dumenil.The-Good-CornerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Good Corner.app/The Good Corner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8467CE3B24B3B03C003086EA /* Build configuration list for PBXProject "The Good Corner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8467CE5D24B3B03E003086EA /* Debug */,
+				8467CE5E24B3B03E003086EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8467CE5F24B3B03E003086EA /* Build configuration list for PBXNativeTarget "The Good Corner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8467CE6024B3B03E003086EA /* Debug */,
+				8467CE6124B3B03E003086EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8467CE6224B3B03E003086EA /* Build configuration list for PBXNativeTarget "The Good CornerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8467CE6324B3B03E003086EA /* Debug */,
+				8467CE6424B3B03E003086EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8467CE3824B3B03C003086EA /* Project object */;
+}
