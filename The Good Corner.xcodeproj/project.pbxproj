@@ -11,6 +11,7 @@
 		8467CE4D24B3B03D003086EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467CE4C24B3B03D003086EA /* Assets.xcassets */; };
 		8467CE5024B3B03D003086EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467CE4E24B3B03D003086EA /* LaunchScreen.storyboard */; };
 		8467CE5B24B3B03E003086EA /* The_Good_CornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */; };
+		849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B524B45C0C008F3591 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		8467CE5624B3B03E003086EA /* The Good CornerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Good CornerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8467CE5A24B3B03E003086EA /* The_Good_CornerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Good_CornerTests.swift; sourceTree = "<group>"; };
 		8467CE5C24B3B03E003086EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849487B524B45C0C008F3591 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +92,18 @@
 			path = "The Good CornerTests";
 			sourceTree = "<group>";
 		};
+		849487B424B45B8E008F3591 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				849487B524B45C0C008F3591 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		849487B824B45E27008F3591 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				849487B424B45B8E008F3591 /* Coordinators */,
 				8467CE4324B3B03D003086EA /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -199,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8467CE4424B3B03D003086EA /* AppDelegate.swift in Sources */,
+				849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
