@@ -15,7 +15,9 @@ class MainCoordinator {
     private let adsRepository: AdsRepository
 
     private lazy var navigationController: UINavigationController = {
-        return UINavigationController(rootViewController: rootController)
+        let navController = UINavigationController(rootViewController: rootController)
+        navController.navigationBar.isTranslucent = false
+        return navController
     }()
 
     private lazy var rootController: AdsListViewController = {

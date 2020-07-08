@@ -14,6 +14,7 @@
 		846DFD5624B6007F00A09365 /* AdsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5524B6007F00A09365 /* AdsListViewController.swift */; };
 		846DFD5824B6009900A09365 /* AdsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5724B6009900A09365 /* AdsListViewModel.swift */; };
 		846DFD5A24B600BA00A09365 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5924B600BA00A09365 /* AdTableViewCell.swift */; };
+		846DFD5C24B6247300A09365 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5B24B6247300A09365 /* CategoryCollectionViewCell.swift */; };
 		849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B524B45C0C008F3591 /* MainCoordinator.swift */; };
 		849487BA24B46429008F3591 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B924B46429008F3591 /* RequestManager.swift */; };
 		849487BC24B46D35008F3591 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BB24B46D35008F3591 /* APIManager.swift */; };
@@ -45,6 +46,7 @@
 		846DFD5524B6007F00A09365 /* AdsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewController.swift; sourceTree = "<group>"; };
 		846DFD5724B6009900A09365 /* AdsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewModel.swift; sourceTree = "<group>"; };
 		846DFD5924B600BA00A09365 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
+		846DFD5B24B6247300A09365 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		849487B524B45C0C008F3591 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		849487B924B46429008F3591 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		849487BB24B46D35008F3591 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				846DFD5524B6007F00A09365 /* AdsListViewController.swift */,
 				846DFD5724B6009900A09365 /* AdsListViewModel.swift */,
 				846DFD5924B600BA00A09365 /* AdTableViewCell.swift */,
+				846DFD5B24B6247300A09365 /* CategoryCollectionViewCell.swift */,
 			);
 			path = AdsList;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				849487C424B47832008F3591 /* AdsManager.swift in Sources */,
 				849487BC24B46D35008F3591 /* APIManager.swift in Sources */,
 				849487BF24B46E05008F3591 /* Category.swift in Sources */,
+				846DFD5C24B6247300A09365 /* CategoryCollectionViewCell.swift in Sources */,
 				849487C124B46E28008F3591 /* AdDTO.swift in Sources */,
 				849487BA24B46429008F3591 /* RequestManager.swift in Sources */,
 				846DFD5A24B600BA00A09365 /* AdTableViewCell.swift in Sources */,
