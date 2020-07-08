@@ -15,6 +15,8 @@
 		846DFD5824B6009900A09365 /* AdsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5724B6009900A09365 /* AdsListViewModel.swift */; };
 		846DFD5A24B600BA00A09365 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5924B600BA00A09365 /* AdTableViewCell.swift */; };
 		846DFD5C24B6247300A09365 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD5B24B6247300A09365 /* CategoryCollectionViewCell.swift */; };
+		846DFD6424B655D100A09365 /* UIColor+GoodCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD6324B655D100A09365 /* UIColor+GoodCorner.swift */; };
+		846DFD6724B6587400A09365 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846DFD6924B6587400A09365 /* Localizable.strings */; };
 		849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B524B45C0C008F3591 /* MainCoordinator.swift */; };
 		849487BA24B46429008F3591 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B924B46429008F3591 /* RequestManager.swift */; };
 		849487BC24B46D35008F3591 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BB24B46D35008F3591 /* APIManager.swift */; };
@@ -47,6 +49,8 @@
 		846DFD5724B6009900A09365 /* AdsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewModel.swift; sourceTree = "<group>"; };
 		846DFD5924B600BA00A09365 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		846DFD5B24B6247300A09365 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		846DFD6324B655D100A09365 /* UIColor+GoodCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+GoodCorner.swift"; sourceTree = "<group>"; };
+		846DFD6824B6587400A09365 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		849487B524B45C0C008F3591 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		849487B924B46429008F3591 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		849487BB24B46D35008F3591 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				8467CE4C24B3B03D003086EA /* Assets.xcassets */,
 				8467CE4E24B3B03D003086EA /* LaunchScreen.storyboard */,
 				8467CE5124B3B03D003086EA /* Info.plist */,
+				846DFD6924B6587400A09365 /* Localizable.strings */,
 			);
 			path = "The Good Corner";
 			sourceTree = "<group>";
@@ -139,6 +144,14 @@
 			path = AdDetail;
 			sourceTree = "<group>";
 		};
+		846DFD6024B6541E00A09365 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				846DFD6324B655D100A09365 /* UIColor+GoodCorner.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		849487B424B45B8E008F3591 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 				849487BD24B46DE2008F3591 /* Models */,
 				849487B724B45CE3008F3591 /* Managers */,
 				849487B424B45B8E008F3591 /* Coordinators */,
+				846DFD6024B6541E00A09365 /* Extension */,
 				8467CE4324B3B03D003086EA /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -269,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8467CE5024B3B03D003086EA /* LaunchScreen.storyboard in Resources */,
+				846DFD6724B6587400A09365 /* Localizable.strings in Resources */,
 				8467CE4D24B3B03D003086EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +305,7 @@
 				849487C624B478B7008F3591 /* Ad.swift in Sources */,
 				849487C424B47832008F3591 /* AdsManager.swift in Sources */,
 				849487BC24B46D35008F3591 /* APIManager.swift in Sources */,
+				846DFD6424B655D100A09365 /* UIColor+GoodCorner.swift in Sources */,
 				849487BF24B46E05008F3591 /* Category.swift in Sources */,
 				846DFD5C24B6247300A09365 /* CategoryCollectionViewCell.swift in Sources */,
 				849487C124B46E28008F3591 /* AdDTO.swift in Sources */,
@@ -327,6 +343,14 @@
 				8467CE4F24B3B03D003086EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		846DFD6924B6587400A09365 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846DFD6824B6587400A09365 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
