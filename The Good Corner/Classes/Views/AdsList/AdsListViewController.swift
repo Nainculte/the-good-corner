@@ -35,7 +35,7 @@ class AdsListViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .plain)
 //        tableView.delegate = self
         tableView.dataSource = self
-//        tableView.prefetchDataSource = self
+        tableView.prefetchDataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -60,6 +60,8 @@ class AdsListViewController: UIViewController {
         view.retryAction = reload
         return view
     }()
+
+    private var prefetchedIndexes = Set<IndexPath>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +88,7 @@ class AdsListViewController: UIViewController {
     }
 
     private func reload() {
+        prefetchedIndexes.removeAll()
         loadingRetryView.state = .loading
         viewModel.updateCategoriesAndAds()
     }
@@ -127,6 +130,9 @@ extension AdsListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath)
 
         cell.textLabel?.text = viewModel.ads[indexPath.row].title
+        cell.imageView?.image = viewModel.ads[indexPath.row].thumbImage
+
+        prefetchImage(indexPath: indexPath)
 
         return cell
     }
@@ -148,6 +154,30 @@ extension AdsListViewController: UICollectionViewDataSource {
         }
         cell.setupWithCategory(viewModel.categories[indexPath.item])
         return cell
+    }
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension AdsListViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach(prefetchImage(indexPath:))
+        indexPaths.forEach { [weak self] (indexPath) in
+            guard let self = self, self.prefetchedIndexes.contains(indexPath) == false else { return }
+
+            self.prefetchedIndexes.insert(indexPath)
+            self.viewModel.getThumbnailImageForAd(self.viewModel.ads[indexPath.row]) { (_) in
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            }
+        }
+    }
+
+    private func prefetchImage(indexPath: IndexPath) {
+        guard prefetchedIndexes.contains(indexPath) == false else { return }
+
+        prefetchedIndexes.insert(indexPath)
+        viewModel.getThumbnailImageForAd(viewModel.ads[indexPath.row]) { [weak self] (_) in
+            self?.tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
 }
 

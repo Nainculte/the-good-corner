@@ -79,15 +79,19 @@ class AdsManager: AdsRepository {
 
     func fetchThumbnailImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ()) {
         fetchImage(urlString: ad.imagesUrl.thumb) { (image) in
-            ad.thumbImage = image
-            completion(ad)
+            DispatchQueue.main.async {
+                ad.thumbImage = image
+                completion(ad)
+            }
         }
     }
 
     func fetchSmallImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ()) {
         fetchImage(urlString: ad.imagesUrl.small) { (image) in
-            ad.smallImage = image
-            completion(ad)
+            DispatchQueue.main.async {
+                ad.smallImage = image
+                completion(ad)
+            }
         }
     }
 
