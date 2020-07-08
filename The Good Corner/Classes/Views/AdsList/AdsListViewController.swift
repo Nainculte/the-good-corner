@@ -53,6 +53,14 @@ class AdsListViewController: UIViewController {
         return collectionView
     }()
 
+    private lazy var loadingRetryView: LoadingRetryView = {
+        let view = LoadingRetryView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.retryTitle = NSLocalizedString("retry", comment: "")
+        view.retryAction = reload
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,18 +75,25 @@ class AdsListViewController: UIViewController {
 
         viewModel.didUpdateCategories = { [weak self] in
             self?.collectionView.reloadData()
+            self?.loadingRetryView.state = .none
         }
 
-        viewModel.errorOccured = { (error) in
-            print(error)
+        viewModel.errorOccured = { [weak self] (error) in
+            self?.loadingRetryView.state = .error(message: error.localizedDescription)
         }
 
+        reload()
+    }
+
+    private func reload() {
+        loadingRetryView.state = .loading
         viewModel.updateCategoriesAndAds()
     }
 
     private func layoutSubviews() {
         view.addSubview(collectionView)
         view.addSubview(tableView)
+        view.addSubview(loadingRetryView)
 
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -88,7 +103,11 @@ class AdsListViewController: UIViewController {
             collectionView.heightAnchor.constraint(equalToConstant: 50),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loadingRetryView.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingRetryView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingRetryView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingRetryView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 
