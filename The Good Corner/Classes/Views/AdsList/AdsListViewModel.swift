@@ -24,9 +24,18 @@ class AdsListViewModel {
 
     private let repository: AdsListRepository
 
-    var ads: [Ad] { repository.ads }
+    var ads: [Ad] = []
 
     var categories: [Category] { repository.categories }
+
+    var filterCategory: Category? {
+        didSet {
+            guard oldValue != filterCategory else { return }
+
+            ads = Self.updateAds(repository.ads, with: filterCategory)
+            didUpdateAds?()
+        }
+    }
 
     var didUpdateAds: (() -> ())?
 
@@ -46,6 +55,14 @@ class AdsListViewModel {
         repository.fetchThumbnailImageForAd(ad, completion: completion)
     }
 
+    private static func updateAds(_ ads: [Ad], with filteringCategory: Category?) -> [Ad] {
+        if let category = filteringCategory {
+            return ads.filter { $0.category == category }
+        } else {
+            return ads
+        }
+    }
+
 }
 
 extension AdsListViewModel: AdsRepositoryDelegate {
@@ -54,6 +71,7 @@ extension AdsListViewModel: AdsRepositoryDelegate {
     }
 
     func adsRepository(_ repository: AdsRepository, didUpdate ads: [Ad]) {
+        self.ads = Self.updateAds(ads, with: filterCategory)
         didUpdateAds?()
     }
 
