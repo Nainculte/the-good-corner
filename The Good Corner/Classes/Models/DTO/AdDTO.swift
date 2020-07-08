@@ -24,15 +24,4 @@ struct AdDTO: Decodable {
         let thumb: String?
     }
 
-//    private enum CodingKeys: String, CodingKey {
-//        case id
-//        case categoryId = "category_id"
-//        case title
-//        case description
-//        case price
-//        case imagesURL = "images_url"
-//        case creationDate = "creation_date"
-//        case isUrgent = "is_urgent"
-//    }
-
 }

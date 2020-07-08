@@ -16,6 +16,8 @@
 		849487BC24B46D35008F3591 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BB24B46D35008F3591 /* APIManager.swift */; };
 		849487BF24B46E05008F3591 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BE24B46E05008F3591 /* Category.swift */; };
 		849487C124B46E28008F3591 /* AdDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487C024B46E28008F3591 /* AdDTO.swift */; };
+		849487C424B47832008F3591 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487C324B47832008F3591 /* AdsManager.swift */; };
+		849487C624B478B7008F3591 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487C524B478B7008F3591 /* Ad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		849487BB24B46D35008F3591 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		849487BE24B46E05008F3591 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		849487C024B46E28008F3591 /* AdDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDTO.swift; sourceTree = "<group>"; };
+		849487C324B47832008F3591 /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
+		849487C524B478B7008F3591 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				849487B924B46429008F3591 /* RequestManager.swift */,
 				849487BB24B46D35008F3591 /* APIManager.swift */,
+				849487C324B47832008F3591 /* AdsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				849487C224B476B7008F3591 /* DTO */,
 				849487BE24B46E05008F3591 /* Category.swift */,
+				849487C524B478B7008F3591 /* Ad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849487C624B478B7008F3591 /* Ad.swift in Sources */,
+				849487C424B47832008F3591 /* AdsManager.swift in Sources */,
 				849487BC24B46D35008F3591 /* APIManager.swift in Sources */,
 				849487BF24B46E05008F3591 /* Category.swift in Sources */,
 				849487C124B46E28008F3591 /* AdDTO.swift in Sources */,
