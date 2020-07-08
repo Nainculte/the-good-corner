@@ -8,24 +8,42 @@
 
 import UIKit
 
-protocol AdsManagerDelegate: class {
+protocol AdsRepositoryDelegate: class {
 
-    func adManager(_ manager: AdsManager, didUpdate categories: [Category])
+    func adsRepository(_ repository: AdsRepository, didUpdate categories: [Category])
 
-    func adManager(_ manager: AdsManager, didUpdate ads: [Ad])
+    func adsRepository(_ repository: AdsRepository, didUpdate ads: [Ad])
 
-    func adManager(_ manager: AdsManager, failedFetching error: APIError)
+    func adsRepository(_ repository: AdsRepository, failedFetching error: APIError)
 
 }
 
-class AdsManager {
+protocol AdsRepository: class, AdsListRepository {
+
+    var ads: [Ad] { get }
+
+    var categories: [Category] { get }
+
+    var delegate: AdsRepositoryDelegate? { get set }
+
+    init(api: API)
+
+    func fetchCategoriesAndAds()
+
+    func fetchThumbnailImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ())
+
+    func fetchSmallImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ())
+
+}
+
+class AdsManager: AdsRepository {
 
     private let api: API
 
     private(set) var ads = [Ad]() {
         didSet {
             DispatchQueue.main.async {
-                self.delegate?.adManager(self, didUpdate: self.ads)
+                self.delegate?.adsRepository(self, didUpdate: self.ads)
             }
         }
     }
@@ -33,14 +51,14 @@ class AdsManager {
     private(set) var categories = [Category]() {
         didSet {
             DispatchQueue.main.async {
-                self.delegate?.adManager(self, didUpdate: self.categories)
+                self.delegate?.adsRepository(self, didUpdate: self.categories)
             }
         }
     }
 
-    weak var delegate: AdsManagerDelegate?
+    weak var delegate: AdsRepositoryDelegate?
 
-    init(api: API) {
+    required init(api: API) {
         self.api = api
     }
 
@@ -53,7 +71,7 @@ class AdsManager {
                 self.fetchAds()
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.delegate?.adManager(self, failedFetching: error)
+                    self.delegate?.adsRepository(self, failedFetching: error)
                 }
             }
         }
@@ -81,7 +99,7 @@ class AdsManager {
                 self.ads = dtos.map { Ad(dto: $0, category: self.categories.categoryWithId($0.categoryId)) }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.delegate?.adManager(self, failedFetching: error)
+                    self.delegate?.adsRepository(self, failedFetching: error)
                 }
             }
         }
