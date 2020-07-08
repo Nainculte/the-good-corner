@@ -96,7 +96,9 @@ class AdsManager: AdsRepository {
             guard let self = self else { return }
             switch result {
             case .success(let dtos):
-                self.ads = dtos.map { Ad(dto: $0, category: self.categories.categoryWithId($0.categoryId)) }
+                self.ads = dtos
+                    .map { Ad(dto: $0, category: self.categories.categoryWithId($0.categoryId)) }
+                    .sorted()
             case .failure(let error):
                 DispatchQueue.main.async {
                     self.delegate?.adsRepository(self, failedFetching: error)

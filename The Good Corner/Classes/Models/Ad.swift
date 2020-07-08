@@ -48,3 +48,16 @@ extension Ad: Hashable {
         hasher.combine(id)
     }
 }
+
+extension Ad: Comparable {
+    static func < (lhs: Ad, rhs: Ad) -> Bool {
+        switch (lhs.isUrgent, rhs.isUrgent) {
+        case (true, true), (false, false):
+            return lhs.creationDate < rhs.creationDate
+        case (true, false):
+            return true
+        case (false, true):
+            return false
+        }
+    }
+}
