@@ -28,6 +28,7 @@
 		846DFD8124B770E400A09365 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD8024B770E400A09365 /* APIManagerTests.swift */; };
 		846DFD8324B770F900A09365 /* AdsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD8224B770F900A09365 /* AdsManagerTests.swift */; };
 		846DFD8624B7740700A09365 /* RequestSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD8524B7740700A09365 /* RequestSenderMock.swift */; };
+		846DFD8824B7752500A09365 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846DFD8724B7752500A09365 /* APIMock.swift */; };
 		849487B624B45C0C008F3591 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B524B45C0C008F3591 /* MainCoordinator.swift */; };
 		849487BA24B46429008F3591 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487B924B46429008F3591 /* RequestManager.swift */; };
 		849487BC24B46D35008F3591 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849487BB24B46D35008F3591 /* APIManager.swift */; };
@@ -245,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				846DFD8524B7740700A09365 /* RequestSenderMock.swift */,
+				846DFD8724B7752500A09365 /* APIMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -428,6 +430,7 @@
 				846DFD8124B770E400A09365 /* APIManagerTests.swift in Sources */,
 				846DFD7924B7707400A09365 /* AdsListViewModelTests.swift in Sources */,
 				846DFD8624B7740700A09365 /* RequestSenderMock.swift in Sources */,
+				846DFD8824B7752500A09365 /* APIMock.swift in Sources */,
 				846DFD7D24B770B300A09365 /* CategoryTests.swift in Sources */,
 				846DFD7F24B770C500A09365 /* AdTests.swift in Sources */,
 				846DFD8324B770F900A09365 /* AdsManagerTests.swift in Sources */,
