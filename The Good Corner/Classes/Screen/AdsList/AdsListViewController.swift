@@ -180,6 +180,7 @@ extension AdsListViewController: UICollectionViewDelegate {
         let selected = viewModel.categories[indexPath.item]
         if viewModel.filterCategory == selected {
             viewModel.filterCategory = nil
+            collectionView.deselectItem(at: indexPath, animated: true)
         } else {
             viewModel.filterCategory = selected
         }

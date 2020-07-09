@@ -13,7 +13,15 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        contentView.layer.cornerRadius = 4
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.primary.cgColor
         contentView.addSubview(titleLabel)
+
+        selectedBackgroundView = UIView()
+        selectedBackgroundView?.backgroundColor = .primary
+        selectedBackgroundView?.layer.cornerRadius = 4
+
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
