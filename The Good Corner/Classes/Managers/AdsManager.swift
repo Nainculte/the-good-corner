@@ -18,7 +18,7 @@ protocol AdsRepositoryDelegate: class {
 
 }
 
-protocol AdsRepository: class, AdsListRepository {
+protocol AdsRepository: class, AdsListRepository, AdDetailRepository {
 
     var ads: [Ad] { get }
 

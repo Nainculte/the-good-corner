@@ -33,6 +33,19 @@ class Ad {
         self.isUrgent = dto.isUrgent
     }
 
+    var formattedPrice: String? {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter.string(from: NSNumber(value: price))
+    }
+
+    var formattedDate: String? {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter.string(from: creationDate)
+    }
+
 }
 
 extension Ad: Equatable {

@@ -38,6 +38,17 @@ class MainCoordinator {
         window.makeKeyAndVisible()
     }
 
+    func didSelectAd(_ ad: Ad) {
+        let controller = detailController(for: ad)
+        navigationController.pushViewController(controller, animated: true)
+    }
+
+    private func detailController(for ad: Ad) -> AdDetailViewController {
+        let viewModel = AdDetailViewModel(repository: adsRepository, ad: ad)
+        let controller = AdDetailViewController(viewModel: viewModel, coordinator: self)
+        return controller
+    }
+
 }
 
 extension MainCoordinator: AdsRepositoryDelegate {
