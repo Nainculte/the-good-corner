@@ -58,9 +58,8 @@ class AdsListViewModel {
     private static func updateAds(_ ads: [Ad], with filteringCategory: Category?) -> [Ad] {
         if let category = filteringCategory {
             return ads.filter { $0.category == category }
-        } else {
-            return ads
         }
+        return ads
     }
 
 }
