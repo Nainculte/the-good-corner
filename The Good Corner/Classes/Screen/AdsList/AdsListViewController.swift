@@ -112,13 +112,12 @@ extension AdsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as? AdTableViewCell else {
+            fatalError("Incorrect cell dequeued")
+        }
 
-        cell.textLabel?.text = viewModel.ads[indexPath.row].title
-        cell.imageView?.image = viewModel.ads[indexPath.row].thumbImage ?? UIImage(named: "no-image-placeholder")
-
+        cell.ad = viewModel.ads[indexPath.row]
         prefetchImage(indexPath: indexPath)
-
         return cell
     }
 }
@@ -145,7 +144,7 @@ extension AdsListViewController: UITableViewDataSourcePrefetching {
 
         guard ad.thumbImage == nil else { return }
 
-        viewModel.getThumbnailImageForAd(viewModel.ads[indexPath.row]) { [weak self] (_) in
+        viewModel.getThumbnailImageForAd(ad) { [weak self] (_) in
             self?.tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
