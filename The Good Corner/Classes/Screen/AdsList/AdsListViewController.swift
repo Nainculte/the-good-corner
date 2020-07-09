@@ -57,6 +57,7 @@ class AdsListViewController: ViewController<AdsListViewModel, AdsListCoordinator
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
 
         viewModel.didUpdateAds = { [weak self] in
+            self?.prefetchedIndexes.removeAll()
             self?.tableView.reloadData()
         }
 
@@ -73,7 +74,6 @@ class AdsListViewController: ViewController<AdsListViewModel, AdsListCoordinator
     }
 
     private func reload() {
-        prefetchedIndexes.removeAll()
         loadingRetryView.state = .loading
         viewModel.updateCategoriesAndAds()
     }
@@ -138,9 +138,13 @@ extension AdsListViewController: UITableViewDataSourcePrefetching {
     }
 
     private func prefetchImage(indexPath: IndexPath) {
+        let ad = viewModel.ads[indexPath.row]
         guard prefetchedIndexes.contains(indexPath) == false else { return }
 
         prefetchedIndexes.insert(indexPath)
+
+        guard ad.thumbImage == nil else { return }
+
         viewModel.getThumbnailImageForAd(viewModel.ads[indexPath.row]) { [weak self] (_) in
             self?.tableView.reloadRows(at: [indexPath], with: .none)
         }
