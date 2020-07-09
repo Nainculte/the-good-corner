@@ -40,6 +40,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
+        label.textColor = .textPrimary
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         return label
     }()
 

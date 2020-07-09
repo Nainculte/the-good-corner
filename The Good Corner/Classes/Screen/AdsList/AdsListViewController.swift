@@ -29,6 +29,7 @@ class AdsListViewController: ViewController<AdsListViewModel, AdsListCoordinator
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
         collectionViewLayout.estimatedItemSize = .init(width: 50, height: 50)
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.allowsMultipleSelection = false
         collectionView.backgroundColor = .white
@@ -88,7 +89,7 @@ class AdsListViewController: ViewController<AdsListViewModel, AdsListCoordinator
             collectionView.bottomAnchor.constraint(equalTo: tableView.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 50),
+            collectionView.heightAnchor.constraint(equalToConstant: 70),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
