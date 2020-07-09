@@ -17,6 +17,7 @@ class AdView: UIView {
             descLabel.text = ad?.description
             priceLabel.text = ad?.formattedPrice
             creationLabel.text = ad?.formattedDate
+            urgentImageView.isHidden = ad?.isUrgent == false
         }
     }
 
@@ -24,6 +25,14 @@ class AdView: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+
+    private lazy var urgentImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "warning"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .primary
         return imageView
     }()
 
@@ -77,6 +86,7 @@ class AdView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(imageView)
+        addSubview(urgentImageView)
         addSubview(titleLabel)
         addSubview(descLabel)
         addSubview(priceLabel)
@@ -86,6 +96,8 @@ class AdView: UIView {
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            urgentImageView.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 8),
+            urgentImageView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -8),
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: priceLabel.trailingAnchor),
