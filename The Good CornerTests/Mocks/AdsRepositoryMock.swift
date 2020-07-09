@@ -17,13 +17,19 @@ class AdsRepositoryMock: AdsRepository {
     var delegate: AdsRepositoryDelegate?
 
     private let error: APIError?
+    private let thumbImageHandler: (() -> ())?
+    private let smallImageHandler: (() -> ())?
 
     init(ads: [Ad]?,
          categories: [The_Good_Corner.Category]?,
-         error: APIError?) {
+         error: APIError?,
+         thumbImageHandler: (() -> ())?,
+         smallImageHandler: (() -> ())?) {
         self.ads = ads ?? []
         self.categories = categories ?? []
         self.error = error
+        self.thumbImageHandler = thumbImageHandler
+        self.smallImageHandler = smallImageHandler
     }
 
     required init(api: API) {
@@ -40,10 +46,12 @@ class AdsRepositoryMock: AdsRepository {
     }
 
     func fetchThumbnailImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ()) {
+        thumbImageHandler?()
         completion(ad)
     }
 
     func fetchSmallImageForAd(_ ad: Ad, completion: @escaping (Ad) -> ()) {
+        smallImageHandler?()
         completion(ad)
     }
 
