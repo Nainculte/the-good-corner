@@ -8,32 +8,17 @@
 
 import UIKit
 
-protocol AdsListCoordinator {
+protocol AdsListCoordinator: class {
+
+    func didSelectAd(_ ad: Ad)
 
 }
 
-class AdsListViewController: UIViewController {
-
-    let viewModel: AdsListViewModel
-
-    let coordinator: AdsListCoordinator
-
-    init(viewModel: AdsListViewModel,
-         coordinator: AdsListCoordinator,
-         nibName: String? = nil,
-         bundle: Bundle? = nil) {
-        self.viewModel = viewModel
-        self.coordinator = coordinator
-        super.init(nibName: nibName, bundle: bundle)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class AdsListViewController: ViewController<AdsListViewModel, AdsListCoordinator> {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-//        tableView.delegate = self
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.prefetchDataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -130,29 +115,10 @@ extension AdsListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath)
 
         cell.textLabel?.text = viewModel.ads[indexPath.row].title
-        cell.imageView?.image = viewModel.ads[indexPath.row].thumbImage
+        cell.imageView?.image = viewModel.ads[indexPath.row].thumbImage ?? UIImage(named: "no-image-placeholder")
 
         prefetchImage(indexPath: indexPath)
 
-        return cell
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-extension AdsListViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.categories.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {
-            fatalError("Incorrect cell dequeued")
-        }
-        cell.setupWithCategory(viewModel.categories[indexPath.item])
         return cell
     }
 }
@@ -178,6 +144,33 @@ extension AdsListViewController: UITableViewDataSourcePrefetching {
         viewModel.getThumbnailImageForAd(viewModel.ads[indexPath.row]) { [weak self] (_) in
             self?.tableView.reloadRows(at: [indexPath], with: .none)
         }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension AdsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        coordinator.didSelectAd(viewModel.ads[indexPath.row])
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension AdsListViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.categories.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {
+            fatalError("Incorrect cell dequeued")
+        }
+        cell.setupWithCategory(viewModel.categories[indexPath.item])
+        return cell
     }
 }
 
