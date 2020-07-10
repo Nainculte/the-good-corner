@@ -146,7 +146,9 @@ extension AdsListViewController: UITableViewDataSourcePrefetching {
         guard ad.thumbImage == nil else { return }
 
         viewModel.getThumbnailImageForAd(ad) { [weak self] (_) in
-            self?.tableView.reloadRows(at: [indexPath], with: .none)
+            guard let self = self else { return }
+            guard self.tableView.indexPathsForVisibleRows?.contains(indexPath) == true else { return }
+            self.tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
 }
